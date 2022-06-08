@@ -25,7 +25,7 @@ function Comment(props: any): ReactElement {
 	});
 
 	useEffect(() => {
-		fetch(`http://127.0.0.1:8000/api/profile/getid/${props.userId}`, {
+		fetch(`http://104.208.72.73:8080/api/profile/getid/${props.userId}`, {
 			method: "GET",
 			mode: "cors",
 			headers: {

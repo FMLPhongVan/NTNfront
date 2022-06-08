@@ -165,7 +165,7 @@ function CreatePost({
 
 		console.log(formData);
 
-		fetch("http://127.0.0.1:8000/api/post/create", {
+		fetch("http://104.208.72.73:8080/api/post/create", {
 			method: "POST",
 			mode: "cors",
 			headers: {

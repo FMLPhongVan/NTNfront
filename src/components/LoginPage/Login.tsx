@@ -100,7 +100,7 @@ function Login({
 	const handleClickSubmit = () => {
 		if (validate(values)) {
 			console.log(values);
-			fetch("http://127.0.0.1:8000/api/login", {
+			fetch("http://104.208.72.73:8080/api/login", {
 				method: "POST",
 				mode: "cors",
 				headers: {

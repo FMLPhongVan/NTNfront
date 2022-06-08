@@ -90,7 +90,7 @@ function UserPost(props: any): ReactElement {
 	// }, [updatedPostId]);
 
 	const handleClickLike = () => {
-		fetch(`http://127.0.0.1:8000/api/like/${props.postId}`, {
+		fetch(`http://104.208.72.73:8080/api/like/${props.postId}`, {
 			method: "POST", 
 			mode: "cors",
 			headers: {
@@ -107,7 +107,7 @@ function UserPost(props: any): ReactElement {
 	};
 
 	const reloadComment = () => {
-		fetch(`http://127.0.0.1:8000/api/post/get/comments/${props.postId}`, {
+		fetch(`http://104.208.72.73:8080/api/post/get/comments/${props.postId}`, {
 			method: "GET",
 			mode: "cors",
 			headers: {
@@ -141,7 +141,7 @@ function UserPost(props: any): ReactElement {
 				</Grid>
 				{props.image && (
 					<Grid item xs={12} my={2} px={2}>
-						<img style={{ width: "100%" }} src={`http://127.0.0.1:8000/storage/${props.image}`}alt="" />
+						<img style={{ width: "100%" }} src={`http://104.208.72.73:8080/storage/${props.image}`}alt="" />
 					</Grid>
 				)}
 				<Grid item xs={12}>

@@ -78,7 +78,7 @@ function SearchBar({
 		const authToken = `Bearer ${token}`;
 		if (searchContent[0] == "#") {
 			if (hashtag.length > 0) {
-				fetch(`http://127.0.0.1:8000/api/post/get/tags/${hashtag}`, {
+				fetch(`http://104.208.72.73:8080/api/post/get/tags/${hashtag}`, {
 					method: "GET",
 					mode: "cors",
 					headers: {
@@ -101,7 +101,7 @@ function SearchBar({
 		}
 		if (searchContent[0] == "@") {
 			if (hashtag.length > 0) {
-				fetch(`http://127.0.0.1:8000/api/profile/get/${userName}`, {
+				fetch(`http://104.208.72.73:8080/api/profile/get/${userName}`, {
 					method: "GET",
 					mode: "cors",
 					headers: {

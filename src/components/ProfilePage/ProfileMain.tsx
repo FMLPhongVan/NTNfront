@@ -30,7 +30,7 @@ function ProfileMain(props: any) {
 
 	useEffect(() => {
 		const authToken = `Bearer ${token}`;
-		fetch(`http://127.0.0.1:8000/api/post/${userId}`, {
+		fetch(`http://104.208.72.73:8080/api/post/${userId}`, {
 			method: "GET",
 			mode: "cors",
 			headers: {

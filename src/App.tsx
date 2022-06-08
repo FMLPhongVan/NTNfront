@@ -8,7 +8,6 @@ import Login from "./components/LoginPage/Login";
 import Registration from "./components/RegistrationPage/Registration";
 import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 import SearchBar from "./components/ToolBar/SearchBar";
-import { Box } from "@mui/system";
 import ProfilePage from "./components/ProfilePage/ProfilePage";
 import LostConnectAlert from "./components/LostConnectAlert/LostConnectAlert";
 import { findUserDataInCookies } from "./store/actions/app/findUserDataInCookies";
@@ -54,7 +53,7 @@ function App({
 		else {
 			const token = document.cookie.replace("token=", "");
 			const authToken = `Bearer ${token}`;
-			fetch("http://127.0.0.1:8000/api/user", {
+			fetch("http://104.208.72.73:8080/api/user", {
 				method: "GET",
 				mode: "cors",
 				headers: {
@@ -86,7 +85,6 @@ function App({
 						<Route path="/profile/:username" element={<ProfilePage />} />
 						<Route path="/friends" element={<FriendsPage />} />
 					</Route>
-					<Route path="test" element={<Box><SearchBar /></Box>} />
 					<Route
 						path="*"
 						element={

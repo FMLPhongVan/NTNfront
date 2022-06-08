@@ -83,7 +83,7 @@ function PostAction(props: any) {
 
 	const handleClickDeletePost = () => {
 		const authToken = `Bearer ${token}`;
-		fetch(`http://127.0.0.1:8000/api/post/edit/${props.postId}`, {
+		fetch(`http://104.208.72.73:8080/api/post/edit/${props.postId}`, {
 			method: "DELETE",
 			mode: "cors",
 			headers: {

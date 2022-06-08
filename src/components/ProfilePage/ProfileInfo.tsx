@@ -44,7 +44,7 @@ function ProfileInfo(props: any): ReactElement {
 
 	useEffect(() => {
 		const authToken = `Bearer ${token}`;
-		fetch(`http://127.0.0.1:8000/api/profile/get/${username}`, {
+		fetch(`http://104.208.72.73:8080/api/profile/get/${username}`, {
 			method: "GET",
 			mode: "cors",
 			headers: {

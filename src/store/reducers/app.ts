@@ -27,7 +27,7 @@ export const inititalState: AppState = {
 
 async function getUserData(token: string) {
 	const authToken = `Bearer ${token}`;
-	return await fetch("http://127.0.0.1:8000/api/user", {
+	return await fetch("http://104.208.72.73:8080/api/user", {
 		method: "GET",
 		mode: "cors",
 		headers: {
@@ -38,7 +38,7 @@ async function getUserData(token: string) {
 
 async function getProfileData(token: string, userId: number) {
 	const authToken = `Bearer ${token}`;
-	return await fetch(`http://127.0.0.1:8000/api/profile/get/${userId}`, {
+	return await fetch(`http://104.208.72.73:8080/api/profile/get/${userId}`, {
 		method: "GET",
 		mode: "cors",
 		headers: {
@@ -76,7 +76,7 @@ export function reduce(
 			const tmpToken = document.cookie.replace("token=", "");
 			const authToken = `Bearer ${tmpToken}`;
 			let userData = { id: 0, username: "" };
-			fetch("http://127.0.0.1:8000/api/user", {
+			fetch("http://104.208.72.73:8080/api/user", {
 				method: "GET",
 				mode: "cors",
 				headers: {

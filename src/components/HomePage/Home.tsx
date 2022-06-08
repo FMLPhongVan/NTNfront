@@ -34,13 +34,13 @@ function Home({
 	const styles = useStyle();
 	const [posts, setPosts] = useState<any>([]);
 	const [scrollPos, setScrollPos] = useState(0);
-	const [nextPageURL, setNextPageURL] = useState<string | null>("http://127.0.0.1:8000/api/post/get/all?page=1");
+	const [nextPageURL, setNextPageURL] = useState<string | null>("http://104.208.72.73:8080/api/post/get/all?page=1");
 
 	console.log(posts);
 
 	useEffect(() => {
 		const authToken = `Bearer ${token}`;
-		fetch("http://127.0.0.1:8000/api/post/get/all", {
+		fetch("http://104.208.72.73:8080/api/post/get/all", {
 			method: "GET",
 			mode: "cors",
 			headers: {
@@ -51,7 +51,7 @@ function Home({
 				console.log(data);
 				setPosts(data.data);
 				setScrollPos(0);
-				if (data.next_page_url != null) {
+				if (data.next_page_url != null && nextPageURL != data.next_page_url) {
 					setNextPageURL(data.next_page_url);
 				}
 			});

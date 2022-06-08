@@ -39,7 +39,7 @@ function CreateComment(props: any): ReactElement {
 	const [content, setContent] = useState("");
 
 	const handleClickSend = () => {
-		fetch(`http://127.0.0.1:8000/api/comments/${props.postId}`, {
+		fetch(`http://104.208.72.73:8080/api/comments/${props.postId}`, {
 			method: "POST",
 			mode: "cors",
 			headers: {
