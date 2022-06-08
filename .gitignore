@@ -8,9 +8,6 @@ node_modules
 # testing
 /client/coverage
 
-# production
-build
-
 # misc
 .DS_Store
 .env.local
