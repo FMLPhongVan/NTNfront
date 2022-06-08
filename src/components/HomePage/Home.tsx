@@ -34,7 +34,7 @@ function Home({
 	const styles = useStyle();
 	const [posts, setPosts] = useState<any>([]);
 	const [scrollPos, setScrollPos] = useState(0);
-	const [nextPageURL, setNextPageURL] = useState<string | null>("http://104.208.72.73:8080/api/post/get/all?page=1");
+	const [nextPageURL, setNextPageURL] = useState<string | null>(null);
 
 	console.log(posts);
 
