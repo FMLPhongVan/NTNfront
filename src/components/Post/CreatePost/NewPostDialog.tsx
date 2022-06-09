@@ -88,7 +88,6 @@ const useStyles = makeStyles({
 	},
 	closeImageBut: {
 		float: "right",
-		position: "absolute",
 		right: "10px",
 		top: "42px",
 		"&:hover": {

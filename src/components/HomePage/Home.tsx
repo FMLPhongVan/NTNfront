@@ -97,7 +97,7 @@ function Home({
 					{
 						posts.map((post: any, index: number) => {
 							return (
-								<div key={index}>
+								<div key={post.id}>
 									<UserPost 
 										userId={post.user_id} 
 										content={post.content} 
